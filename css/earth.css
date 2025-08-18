@@ -1,0 +1,62 @@
+:root {
+    --bg-dark: hsla(260, 15%, 2%, 1); 
+    --bg-light: hsla(45, 25%, 92%, 1);
+    --text-dark: hsla(45, 15%, 88%, 1);
+    --text-light: hsla(260, 10%, 12%, 1);    
+    --tp-base-background-color: hsla(260, 30%, 6%, 0.90);
+    --tp-base-shadow-color: hsla(35, 45%, 25%, 0.60);
+    --tp-button-background-color: hsla(40, 35%, 28%, 1.00);
+    --tp-button-background-color-active: hsla(42, 40%, 42%, 1.00);
+    --tp-button-background-color-focus: hsla(41, 38%, 35%, 1.00);
+    --tp-button-background-color-hover: hsla(40, 36%, 32%, 1.00);
+    --tp-button-foreground-color: hsla(45, 25%, 85%, 0.95);
+    --tp-container-background-color: hsla(258, 25%, 8%, 1.00);
+    --tp-container-background-color-active: hsla(258, 28%, 18%, 1.00);
+    --tp-container-background-color-focus: hsla(258, 26%, 14%, 1.00);
+    --tp-container-background-color-hover: hsla(258, 24%, 11%, 1.00);
+    --tp-container-foreground-color: hsla(45, 20%, 75%, 0.70);
+    --tp-groove-foreground-color: hsla(40, 15%, 60%, 0.25);
+    --tp-input-background-color: hsla(258, 20%, 12%, 0.40);
+    --tp-input-background-color-active: hsla(258, 25%, 22%, 0.40);
+    --tp-input-background-color-focus: hsla(258, 23%, 18%, 0.40);
+    --tp-input-background-color-hover: hsla(258, 22%, 15%, 0.40);
+    --tp-input-foreground-color: hsla(42, 60%, 78%, 0.85);
+    --tp-label-foreground-color: hsla(40, 12%, 65%, 0.60);
+    --tp-monitor-background-color: hsla(40, 30%, 20%, 0.35);
+    --tp-monitor-foreground-color: hsla(42, 45%, 70%, 0.40);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+}
+
+.tp-dfwv {
+    width: 330px !important;
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

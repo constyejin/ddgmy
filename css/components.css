@@ -1,0 +1,86 @@
+body.components {
+  background-image: url('../assets/images/back.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+body.components .wrapper {
+  height: 100vh;
+  padding: 50px;
+}
+
+body.components section {
+  margin-top: 40px;
+}
+
+/* ·········· TITLE ·········· */
+.section_title {
+  font-size: clamp(52px, 6vw, 88px);
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 700;
+  color: var(--subtitle);
+}
+
+.gradient_txt {
+  font-size: clamp(40px, 5vw, 86px);
+  background: linear-gradient(100deg, #00F6FF 7.5%, #0023FF 60.02%, #7200FF 92.18%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ·········· BUTTON ·········· */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-44 {
+  height: 44px;
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(102deg, #00F6FF 3.07%, #0023FF 75.16%);
+  border-radius: var(--btn-radius);
+}
+
+.apply_btn {
+  min-width: 140px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.join_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 380px;
+  padding: .5em 2em;
+  font-size: clamp(28px, 8vw, 40px);
+  font-style: italic;
+  font-weight: 900;
+}
+
+.join_btn .arrow {
+  margin-left: 30px;
+}
+
+.join_btn .arrow img {
+  position: relative;
+  top: -2px;
+  width: 14px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+
