@@ -1,347 +1,258 @@
-@charset "UTF-8";
-@import url('https://fonts.cdnfonts.com/css/segoe-pro');
-@font-face {
-  font-family: 'Segoe Black Italic';
-  src: url('../assets/fonts/SegoeUIBlackItalic.TTF') format('woff2'),
-    url('../assets/fonts/SegoeUIBlackItalic.TTF') format('woff');
-  font-weight: bold;
-  font-style: italic;
+
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Segoe Black';
-  src: url('../assets/fonts/segoeUiBlack.ttf') format('woff2'),
-    url('../assets/fonts/segoeUiBlack.ttf') format('woff');
-  font-weight: bold;
-}
-
-/* 
-Segoe UI Regular
-font-family: "segoe-ui", sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Segoe UI Italic
-font-family: "segoe-ui", sans-serif;
-font-weight: 400;
-font-style: italic;
-
-Segoe UI Bold
-font-family: "segoe-ui", sans-serif;
-font-weight: 700;
-font-style: normal;
-
-Segoe UI Bold Italic
-font-family: "segoe-ui", sans-serif;
-font-weight: 700;
-font-style: italic;
-
-Segoe UI Historic Regular
-font-family: "segoe-ui-historic", sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Segoe UI Symbol Regular
-font-family: "segoe-ui-symbol", sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Black
-font-family: segoe-ui, sans-serif;
-font-weight: 900;
-font-style: normal;
-
-Black Italic
-font-family: segoe-ui, sans-serif;
-font-weight: 900;
-font-style: italic;
-
-*/
-
-*::before, *::after { -webkit-box-sizing: border-box;  box-sizing: border-box;}
-:root {
-  --primary: #410692;
-  --secondary: #1106D2;
-  --tertiary: #D5D8E0;
-  --border-color: #CCCCCC;
-
-  --border-main: 20px;
-  --btn-radius: 50px;
-}
 body {
-  background-color: #000; 
-  color: #fff; 
+  background-color: #000;
+  color: #fff;
   position: relative;
-  top: 0 !important;
 }
 
-h2{font-weight: 600;}
-.hidden { display: none !important;}
-
-
-.section {
-  background-size: cover; 
-  background-position: top center;
-  background-repeat: no-repeat;
-  transition: background 2s 0.3s;
-  font-size: 1em;
-  overflow: hidden;
+.hidden {
+  display: none !important;
 }
 
 
-.pc #mission { background: url(../assets/images/section_bg.png) no-repeat center top / cover;}
-.pc #weare { background: url(../assets/images/section_bg.png) no-repeat center / cover;}
-.pc #value { background: url(../assets/images/section_bg.png) no-repeat center / cover;}
-.pc #hiring { background: url(../assets/images/section_bg.png) no-repeat center / cover;}
-.pc #contact { background: url(../assets/images/section_bg.png) no-repeat center bottom / cover;}
-
-.tb #mission, .mo #mission { background: url(../assets/images/mo_section_bg.png) no-repeat 0% center  / cover;}
-.tb #weare, .mo #weare { background: url(../assets/images/mo_section_bg.png) no-repeat 0% center  / cover;}
-.tb #value, .mo #value { background: url(../assets/images/mo_section_bg.png) no-repeat 0% center  / cover;}
-.tb #hiring, .mo #hiring { background: url(../assets/images/mo_section_bg.png) no-repeat 0% center  / cover;}
-.tb #contact, .mo #contact { background: url(../assets/images/mo_section_bg.png) no-repeat 0% center  / cover;}
 
 /* 풀페이지 커스텀 */
-.fp-wrap { 
-  position: relative; 
+.fp-wrap {
+  position: relative;
   margin: 0 auto;
-  padding: 0 ; 
+  padding: 0;
 }
-#fp-nav {display: none;}
 
-/* ·········· section1 (Main) ·········· */
+#fp-nav {
+  display: none;
+}
+
+/* ·········· MAIN ·········· */
 .video_box {
   position: relative;
   width: 100vw;
   height: 100vh;
   border-radius: 0;
   overflow: hidden;
-  text-align: center;
 }
+
 video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 40%; 
+  object-position: 40%;
 }
+
 .main_contents {
-    width: 100%;
-    position: absolute;
-    bottom: 0%;
-    left: 0;
-    padding: 0 0 0 4%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-.main_title {
-  height: 36vh;
-  padding-bottom: 3%;
-}
-.main_title h1{
+
+.main_title h1 {
   font-family: 'Segoe Black Italic';
   font-size: 3.3em;
   letter-spacing: -0.64px;
   line-height: 1.25;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
-.scroll_box {
-  z-index: 2;
-  width: 1.2em;
-  transition: 0.3s all ease-in;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.scroll-text {
-  font-size: 0.7em;
-  letter-spacing: 2px;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  margin-bottom: 1em;
-}
-.scroll-icon-container {
-    position: relative;
-    width: 1px;
-    height: 7em;
-}
-/* 아이콘의 몸통 */
-.scroll-icon-body {
-    width: 100%;
-    height: 100%;
-    background: rgba(174, 200, 237, 0.5);
-    border-radius: 5px;
-}
-/* 아이콘의 머리 (두꺼운 부분) */
-.scroll-icon-head {
-    position: absolute;
-    top: 0; /* 초기 위치 */
-    left: 0;
-    width: 100%;
-    height: 40%; 
-    background-color: #fff; 
-    border-radius: 5px;
-    animation: moveDown 2s infinite ease-in-out;
-}
 
-
-@keyframes moveDown {
-    0% {
-        transform: translateY(0); 
-    }
-    70% {
-        transform: translateY(7em); 
-    }
-    100% {
-        transform: translateY(0); 
-    }
-}
-
-/* .scroll_box img{
-  object-position: center bottom;
-}
-@keyframes scroll_down {
-  0% {  transform: translateY(2px);}
-  50% {  transform: translateY(12px);}
-  100% {  transform: translateY(2px);}
-} */
-
-
-/* ·········· section2 (Mission) ·········· */
+/* ·········· MISSION ·········· */
 .mission_title {
-    margin: 14% 2em 3em;
-    color: #fff;
-    width: 75%;
+  margin: 14% 2em 3em;
+  color: #fff;
+  width: 75%;
 }
+
 .mission_title h4 {
-  color: #4E5FF7; 
-  /* font-size: 2.5em;  */
-  /* margin: 0 0 0.6em; */
+  color: #4E5FF7;
 }
+
 .mission_title h1 {
-  margin: 0; 
+  margin: 0;
   color: #FFF;
   font-family: 'Segoe Black Italic';
-  /* font-size: 3em; */
-  font-style: italic; 
+  font-style: italic;
   line-height: 1em;
 }
+
 .mission_title p {
-  color: #B0C1FF; 
-  font-size: 1.6em; 
-  font-weight: 400; 
+  color: #B0C1FF;
+  font-size: 1.6em;
+  font-weight: 400;
   margin-top: 0.6em;
   line-height: 1.5;
 }
+
 .pc_mission_slider {
-    display: flex; 
-    justify-content: space-around;
-    align-items: center; 
-    width: 100%; 
-    height: 45vh; 
-    margin-top: 0;
-    flex-wrap: nowrap; 
-    overflow:visible; 
-} 
-.test_slide {
-    position: relative;
-    display: flex;
-    flex-direction: row; 
-    align-items: flex-start;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 1em;
-    text-align: center;
-    flex-shrink: 0; /* 화면이 작아질 때 크기가 줄어들지 않도록 */
-    width: 21%; 
-    height: 100%; 
-    margin-left: -6%; 
-    transition: all 0.2s ease-in-out 0s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 45vh;
+  margin-top: 0;
+  flex-wrap: nowrap;
+  overflow: visible;
 }
-.test_slide:first-child { margin-left: 0;}
-.before_txt, .after_txt {
+
+.test_slide {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1em;
+  text-align: center;
+  flex-shrink: 0;
+  /* 화면이 작아질 때 크기가 줄어들지 않도록 */
+  width: 21%;
+  height: 100%;
+  margin-left: -6%;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.test_slide:first-child {
+  margin-left: 0;
+}
+
+.before_txt,
+.after_txt {
   position: absolute;
   width: 66%;
   top: 50%;
   left: 62%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
-  transition: all 0.2s ease-in-out ;
+  transition: all 0.2s ease-in-out;
 }
+
 .before_txt {
-  display: block; 
+  display: block;
   color: #FFF;
   text-align: center;
   font-family: "Segoe UI";
   font-size: 1.5em;
   font-style: normal;
   font-weight: 600;
-  line-height: normal; 
+  line-height: normal;
 }
+
 .after_txt {
-  visibility: hidden; 
-  opacity: 0; 
+  visibility: hidden;
+  opacity: 0;
   text-align: left;
-} 
+}
+
 .after_txt h2 {
-  font-size: 2.2em; 
+  font-size: 2.2em;
   margin: 0.2em 0;
 }
+
 .after_txt p {
-  font-size: 1.3em; 
+  font-size: 1.3em;
   margin: 0 0 0.7em;
   font-weight: 600;
 }
+
 .after_txt .after_icon {
-  width: 7.6em; 
+  width: 7.6em;
   margin-bottom: 1.4em;
 }
+
 .mission_list {
-  text-align: left; 
-  color: #B0C1FF; 
+  text-align: left;
+  color: #B0C1FF;
   list-style-type: disc;
   /* margin-left: -1.6em;  */
-  font-size: 1.58em; 
+  font-size: 1.58em;
   letter-spacing: -0.3px;
 }
+
 .test_slide4 .mission_list,
 .test_slide5 .mission_list,
-.test_slide6 .mission_list{
-  color: rgba(255, 255, 255, 0.80) ;
+.test_slide6 .mission_list {
+  color: rgba(255, 255, 255, 0.80);
 }
+
 .mo_slide .mission_list {
   color: #fff;
 }
-.test_slide1 {background: url(../assets/images/mission/slide_img1.png) no-repeat left center /contain;}
-.test_slide2 {background: url(../assets/images/mission/slide_img2.png) no-repeat left center /contain;}
-.test_slide3 {background: url(../assets/images/mission/slide_img3.png) no-repeat left center /contain;}
-.test_slide4 {background: url(../assets/images/mission/slide_img4.png) no-repeat left center /contain;}
-.test_slide5 {background: url(../assets/images/mission/slide_img5.png) no-repeat left center /contain;}
-.test_slide6 {background: url(../assets/images/mission/slide_img6.png) no-repeat left center /contain;}
+
+.test_slide1 {
+  background: url(../assets/images/mission/slide_img1.png) no-repeat left center /contain;
+}
+
+.test_slide2 {
+  background: url(../assets/images/mission/slide_img2.png) no-repeat left center /contain;
+}
+
+.test_slide3 {
+  background: url(../assets/images/mission/slide_img3.png) no-repeat left center /contain;
+}
+
+.test_slide4 {
+  background: url(../assets/images/mission/slide_img4.png) no-repeat left center /contain;
+}
+
+.test_slide5 {
+  background: url(../assets/images/mission/slide_img5.png) no-repeat left center /contain;
+}
+
+.test_slide6 {
+  background: url(../assets/images/mission/slide_img6.png) no-repeat left center /contain;
+}
+
 /* 호버되었을 경우 */
-.test_slide.active { 
-  width: 42.5%; 
-  background-repeat: no-repeat; 
-  background-size: contain; 
+.test_slide.active {
+  width: 42.5%;
+  background-repeat: no-repeat;
+  background-size: contain;
   transition: all 0.3s ease-in-out;
-  transition: transform 0.1s ease-in-out , width 0.2s ease-in-out, background-image 0.2s linear ;
-}
-.test_slide1.active {background-image: url(../assets/images/mission/hover_bg1.png); background-position: left center;}
-.test_slide2.active {background-image: url(../assets/images/mission/hover_bg2.png); background-position: left center;}
-.test_slide3.active {background-image: url(../assets/images/mission/hover_bg3.png); background-position: left center;}
-.test_slide4.active {background-image: url(../assets/images/mission/hover_bg4.png); background-position: left center;}
-.test_slide5.active {background-image: url(../assets/images/mission/hover_bg5.png); background-position: left center;}
-.test_slide6.active {background-image: url(../assets/images/mission/hover_bg6.png); background-position: left center;}
-
-.test_slide.active .before_txt { 
-  visibility: hidden; 
-  opacity: 0; 
+  transition: transform 0.1s ease-in-out, width 0.2s ease-in-out, background-image 0.2s linear;
 }
 
-.test_slide.active .after_txt { 
-  visibility: visible; 
+.test_slide1.active {
+  background-image: url(../assets/images/mission/hover_bg1.png);
+  background-position: left center;
+}
+
+.test_slide2.active {
+  background-image: url(../assets/images/mission/hover_bg2.png);
+  background-position: left center;
+}
+
+.test_slide3.active {
+  background-image: url(../assets/images/mission/hover_bg3.png);
+  background-position: left center;
+}
+
+.test_slide4.active {
+  background-image: url(../assets/images/mission/hover_bg4.png);
+  background-position: left center;
+}
+
+.test_slide5.active {
+  background-image: url(../assets/images/mission/hover_bg5.png);
+  background-position: left center;
+}
+
+.test_slide6.active {
+  background-image: url(../assets/images/mission/hover_bg6.png);
+  background-position: left center;
+}
+
+.test_slide.active .before_txt {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.test_slide.active .after_txt {
+  visibility: visible;
   opacity: 1;
   left: 54%;
 }
@@ -351,69 +262,92 @@ video {
   justify-content: flex-start;
   align-items: center;
   width: calc(100vw - 2.4em);
-  height: 42vh; 
+  height: 42vh;
   margin: 0 1.2em 3em;
   padding: 0 2em;
   overflow: hidden;
   background-color: #000;
-  background: url(../assets/images/mission/mo_bg_1.png) no-repeat center /cover; 
-
+  background: url(../assets/images/mission/mo_bg_1.png) no-repeat center /cover;
 }
-.mo_slide2 {background: url(../assets/images/mission/mo_bg_2.png) no-repeat center /cover;}
-.mo_slide3 {background: url(../assets/images/mission/mo_bg_3.png) no-repeat center /cover;}
-.mo_slide4 {background: url(../assets/images/mission/mo_bg_4.png) no-repeat center /cover;}
-.mo_slide5 {background: url(../assets/images/mission/mo_bg_5.png) no-repeat center /cover;}
-.mo_slide6 {background: url(../assets/images/mission/mo_bg_6.png) no-repeat center /cover;}
 
-.mo_text_box h3{ 
+.mo_slide2 {
+  background: url(../assets/images/mission/mo_bg_2.png) no-repeat center /cover;
+}
+
+.mo_slide3 {
+  background: url(../assets/images/mission/mo_bg_3.png) no-repeat center /cover;
+}
+
+.mo_slide4 {
+  background: url(../assets/images/mission/mo_bg_4.png) no-repeat center /cover;
+}
+
+.mo_slide5 {
+  background: url(../assets/images/mission/mo_bg_5.png) no-repeat center /cover;
+}
+
+.mo_slide6 {
+  background: url(../assets/images/mission/mo_bg_6.png) no-repeat center /cover;
+}
+
+.mo_text_box h3 {
   font-size: 2.9em;
 }
+
 .mo_text_box p {
   font-size: 2em;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   margin-bottom: 0.8em;
 }
+
 /* Slick에서 생성하는 화살표 숨기기 */
-.slick-prev, .slick-next, .slick-dots {
+.slick-prev,
+.slick-next,
+.slick-dots {
   display: none !important;
 }
 
 /* 진행바 스타일 */
 .slick-progress {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35%;
-    height: 2px;
-    background: rgba(174, 200, 237, 0.60);
-    border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  height: 2px;
+  background: rgba(174, 200, 237, 0.60);
+  border-radius: 5px;
 }
 
 .slick-progress-bar {
-    height: 100%;
-    width: 0; /* 초기 너비 */
-    background-color: #fff;
-    border-radius: 5px;
-    transition: width 0.3s ease; /* 너비 변경 애니메이션 */
+  height: 100%;
+  width: 0;
+  /* 초기 너비 */
+  background-color: #fff;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+  /* 너비 변경 애니메이션 */
 }
 
 /* 페이지 번호 스타일 */
 .slick-page-info {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    width: 50vw;
-    color: #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  color: #fff;
 }
-.slick-current-page,.slick-total-page { 
-  font-size: 1.5em; 
+
+.slick-current-page,
+.slick-total-page {
+  font-size: 1.5em;
   font-weight: 600;
 }
+
 .slick-total-page {
   opacity: 0.6;
 }
@@ -425,51 +359,81 @@ video {
   margin: 0 auto;
   background: url(../assets/images/we_are/we_are_title_mo.png) no-repeat center / contain;
 }
+
 .we_are_desc {
   font-size: 1.6em;
   font-weight: 400;
   text-align: center;
-  color:#B0C1FF;
+  color: #B0C1FF;
 }
-.we_are_desc_pc {display: none; margin: 1.8em auto 0;} 
-.we_are_desc_mo {display: block; margin: 5% auto 0;} 
+
+.we_are_desc_pc {
+  display: none;
+  margin: 1.8em auto 0;
+}
+
+.we_are_desc_mo {
+  display: block;
+  margin: 5% auto 0;
+}
 
 /* 구글 번역시 폰트 깨지는 부분 */
-.notranslate { font-family: 'Segoe Black', sans-serif !important;}
+.notranslate {
+  font-family: 'Segoe Black', sans-serif !important;
+}
 
 /* ·········· 반응형 ·········· */
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 359px) {}
 
-}
-@media screen and (min-width: 360px) {
-  
-}
+@media screen and (min-width: 360px) {}
+
 @media screen and (min-width: 768px) {
-  .fp-wrap { padding: 0 2em; }
-  .pc #main::after, .tb #main::after { 
+  .fp-wrap {
+    padding: 0 2em;
+  }
+
+  .pc #main::after,
+  .tb #main::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    content: "";
     background: url(../assets/images/main_gradient.png) no-repeat top center / cover;
   }
-  .mission_title { margin: 8% 2em 3em;}
-  .mo_slide { width: calc(100vw - 8em);}
+
+  .mission_title {
+    margin: 8% 2em 3em;
+  }
+
+  .mo_slide {
+    width: calc(100vw - 8em);
+  }
+
   /* ·········· section3 : we are ·········· */
-  .we_are_title {height: 40vh;}
+  .we_are_title {
+    height: 40vh;
+  }
 
 }
+
 /* pc 헤더 변경 : 1280px~ */
 @media screen and (min-width: 1280px) {
   .pc_mission_slider {
-    height: 48vh; 
+    height: 48vh;
     margin-top: 2em;
     transform: translateX(-6%);
   }
-  .test_slide {width: 20%;}
-  .test_slide.active {width: 41%;}
+
+  .test_slide {
+    width: 20%;
+  }
+
+  .test_slide.active {
+    width: 41%;
+  }
+
   .mission_list {
     font-size: 1em;
     font-style: normal;
@@ -478,61 +442,89 @@ video {
     list-style-type: disc;
     margin-left: 1em;
   }
+
   .mission_title {
     margin: 5% 0 0;
     width: 100%;
     color: #fff;
   }
-  .fp-wrap { padding: 0; }
+
+  .fp-wrap {
+    padding: 0;
+  }
+
   .main_contents {
-    width: 100%;
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: 0;
     padding: 0 0 0 0;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border: 4px solid red;
   }
+
   .main_title {
     height: 46vh;
     padding-bottom: 3%;
   }
+
   .main_title h1 {
     font-size: 6em;
     letter-spacing: -0.9px;
     line-height: 1.2;
   }
-  .scroll_box {width: 0.9em;}
 
   /* ·········· section3 : we are ·········· */
   .we_are_title {
     height: 24vh;
     background: url(../assets/images/we_are/we_are_title_pc.png) no-repeat center / contain;
   }
-  .we_are_desc_pc {display: block;} 
-  .we_are_desc_mo {display: none;} 
+
+  .we_are_desc_pc {
+    display: block;
+  }
+
+  .we_are_desc_mo {
+    display: none;
+  }
 
 }
 
 @media screen and (min-width: 1440px) {
   .pc_mission_slider {
-    height: 43vh; 
+    height: 43vh;
     margin-top: 3em;
   }
 
 }
 
 @media screen and (min-width: 1920px) {
-  .pc_mission_slider { margin-top: 6em;}
-  .test_slide {width: 18.8%;}
-  .test_slide.active {width: 37.5%;}
+  .pc_mission_slider {
+    margin-top: 6em;
+  }
+
+  .test_slide {
+    width: 18.8%;
+  }
+
+  .test_slide.active {
+    width: 37.5%;
+  }
 }
 
 @media screen and (min-width: 3000px) {
-  .test_slide { width: 17%;}
-    .pc_mission_slider {height: 46vh;} 
-  .test_slide.active { width: 34.5%;}
-  
+  .test_slide {
+    width: 17%;
+  }
+
+  .pc_mission_slider {
+    height: 46vh;
+  }
+
+  .test_slide.active {
+    width: 34.5%;
+  }
+
 }

@@ -18,7 +18,7 @@ function initializePage() {
     // 풀페이지
     fpCon.fullpage({
         navigation: false,
-        anchors: ["fp-main", "fp-mission", "fp-weare", "fp-value", "fp-hiring", "fp-contact"],
+        anchors: ["fp-main", "fp-mission", "fp-value", "fp-culture", "fp-contact"],
         afterLoad: function (origin, destination, direction) {
             // gnb 링크의 active 상태를 업데이트하는 로직을 분리된 함수에 위임합니다.
             // header_v2.js에 정의된 'updateGnbActiveState' 함수를 호출합니다.
