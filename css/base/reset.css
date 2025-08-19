@@ -3,7 +3,10 @@
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Segoe Pro', sans-serif;
+  font-family: 'Segoe Pro Display', sans-serif;
 }
 
 *::before,

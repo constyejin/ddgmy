@@ -3,6 +3,7 @@
 @import './base/colors.css';
 @import './components.css';
 
+
 section.back_img,
 div.back_img {
   width: 100vw;
@@ -48,31 +49,11 @@ div.back_img {
 }
 
 .ddg_value_item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 80px;
-  visibility: hidden;
   width: 100%;
-  opacity: 0;
-  filter: blur(10px);
-  transition: 
-    visibility 0s linear 400ms, 
-    opacity 400ms ease-in-out,
-    filter 400ms ease-in-out,
-    transform 400ms ease-in-out;
-}
-
-.ddg_value_item.is_active {
-  visibility: visible;
-  opacity: 1;
-  filter: blur(0);
-  transform: translate(-50%, -50%) scale(1);
-  transition-delay: 300ms;
 }
 
 .ddg_value_item .ddg_value_txt {
@@ -88,7 +69,6 @@ div.back_img {
 .ddg_value_item .sub_txt {
   max-width: 390px;
   padding-bottom: 50px;
-  font-size: 1.6em;
 }
 
 .ddg_value_img {
@@ -100,136 +80,6 @@ div.back_img {
   height: 100%;
   object-fit: contain;
 }
-
-.ddg_value_btn {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-.ddg_value_btn_list {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  gap: 12px;
-}
-
-.ddg_value_btn_list li {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  cursor: pointer;
-  border: 1px solid var(--txt-primary);
-}
-
-.ddg_value_btn_list li.is_active {
-  border: 4px solid #a6b4fa;
-}
-
-.ddg_value_btn_list li.is_active::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%; 
-  box-shadow: 0 0 12px 6px rgba(232, 237, 255, 0.8);
-}
-
-.ddg_value_btn_list li img {
-  width: 18px;
-  height: 18px;
-}
-
-.ddg_value_btn_list li img.d {
-  margin-right: -2px;
-}
-
-.ddg_value_btn_list li img.g {
-  margin-left: -2px;
-}
-
-/* ·········· HIRING ·········· */
-.hiring {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-}
-
-.hiring_content {
-  width: 90%;
-  height: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  background-image: url('../assets/images/hiring.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.hiring:hover .arrow {
-  animation: arrow-bounce 1s ease-in-out infinite;
-}
-
-@keyframes arrow-bounce {
-  0%, 100% { transform: translateX(0); }
-  50%      { transform: translateX(5px); }
-}
-
-.hiring {
-  gap: 60px;
-  padding: 0 80px;
-}
-
-.hiring_list {
-  display: grid;
-  justify-items: center;
-  gap: 60px;
-}
-
-.hiring_item {
-  white-space: nowrap; 
-  color: #E4EAFF;
-  font-size: clamp(18px, 3vw, 36px);
-  font-weight: 800;
-  transition: font-size 300ms ease-in-out, font-weight 300ms ease-in-out;
-}
-
-.hiring_item:nth-child(1)  { grid-column: 1  / span 3; }
-.hiring_item:nth-child(2)  { grid-column: 4  / span 3; }
-.hiring_item:nth-child(3)  { grid-column: 7  / span 3; }
-.hiring_item:nth-child(4)  { grid-column: 10 / span 3; }
-
-.hiring_item:nth-child(5)  { grid-column: 1  / span 2; }
-.hiring_item:nth-child(6)  { grid-column: 3  / span 2; }
-.hiring_item:nth-child(7)  { grid-column: 5  / span 2; }
-.hiring_item:nth-child(8)  { grid-column: 7  / span 2; }
-.hiring_item:nth-child(9)  { grid-column: 9  / span 2; }
-
-.hiring_item:nth-child(10) { grid-column: 1  / span 3; }
-.hiring_item:nth-child(11) { grid-column: 4  / span 3; }
-.hiring_item:nth-child(12) { grid-column: 7  / span 3; }
-.hiring_item:nth-child(13) { grid-column: 10 / span 3; }
-
-.hiring_item.hash {
-  font-size: clamp(22px, 3vw, 40px);
-  font-weight: 900;
-  background: linear-gradient(101deg, #00F6FF 3.16%, #0023FF 114.11%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hiring_item span {
-  display: none;
-}
-
 
 /* ·········· FOOTER ·········· */
 .global_footer {
@@ -342,7 +192,20 @@ div.back_img {
   object-fit: contain;
 }
 
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+  opacity: .6;
+}
+
 @media screen and (max-width: 1280px) {
+  .main_back::after {
+    content: '';
+    background-image: none;
+  }
+
   /* ········ DDG_VALUE ········· */
   .ddg_value_wrap {
     padding: 0 40px;

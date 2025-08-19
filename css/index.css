@@ -16,6 +16,19 @@ body {
 }
 
 /* ·········· MAIN ·········· */
+.main_back::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('../assets/images/main_back.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
 .video_box {
   position: relative;
   width: 100vw;
@@ -32,12 +45,11 @@ video {
 }
 
 .main_contents {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+} 
 
 .main_title h1 {
   font-family: 'Segoe Black Italic';
@@ -68,19 +80,21 @@ video {
 
 .mission_title p {
   color: #B0C1FF;
-  font-size: 1.6em;
   font-weight: 400;
   margin-top: 0.6em;
   line-height: 1.5;
 }
 
 .pc_mission_slider {
+  position: relative;
+  left: -10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 45vh;
-  margin-top: 0;
+  max-width: 1400px;
+  height: 430px;
+  margin-top: 40px;
   flex-wrap: nowrap;
   overflow: visible;
 }
@@ -122,7 +136,7 @@ video {
   color: #FFF;
   text-align: center;
   font-family: "Segoe UI";
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -131,30 +145,20 @@ video {
 .after_txt {
   visibility: hidden;
   opacity: 0;
-  text-align: left;
-}
-
-.after_txt h2 {
-  font-size: 2.2em;
-  margin: 0.2em 0;
+  text-align: center;
 }
 
 .after_txt p {
-  font-size: 1.3em;
-  margin: 0 0 0.7em;
+  margin: 20px 0 16px;
   font-weight: 600;
-}
-
-.after_txt .after_icon {
-  width: 7.6em;
-  margin-bottom: 1.4em;
+  /* text-align: left; */
 }
 
 .mission_list {
   text-align: left;
   color: #B0C1FF;
   list-style-type: disc;
-  /* margin-left: -1.6em;  */
+  margin-left: -1.6em; 
   font-size: 1.58em;
   letter-spacing: -0.3px;
 }
@@ -195,7 +199,6 @@ video {
 
 /* 호버되었을 경우 */
 .test_slide.active {
-  width: 42.5%;
   background-repeat: no-repeat;
   background-size: contain;
   transition: all 0.3s ease-in-out;
@@ -347,7 +350,6 @@ video {
 }
 
 .we_are_desc {
-  font-size: 1.6em;
   font-weight: 400;
   text-align: center;
   color: #B0C1FF;
@@ -378,17 +380,6 @@ video {
     padding: 0 2em;
   }
 
-  .pc #main::after,
-  .tb #main::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../assets/images/main_gradient.png) no-repeat top center / cover;
-  }
-
   .mission_title {
     margin: 8% 2em 3em;
   }
@@ -406,12 +397,6 @@ video {
 
 /* pc 헤더 변경 : 1280px~ */
 @media screen and (min-width: 1280px) {
-  .pc_mission_slider {
-    height: 48vh;
-    margin-top: 2em;
-    transform: translateX(-6%);
-  }
-
   .test_slide {
     width: 20%;
   }
@@ -421,12 +406,12 @@ video {
   }
 
   .mission_list {
-    font-size: 1em;
+    font-size: .9em;
     font-style: normal;
     font-weight: 400;
     line-height: 1.3;
     list-style-type: disc;
-    margin-left: 1em;
+    margin-left: 3.4em;
   }
 
   .mission_title {
@@ -437,18 +422,6 @@ video {
 
   .fp-wrap {
     padding: 0;
-  }
-
-  .main_contents {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    border: 4px solid red;
   }
 
   .main_title {
@@ -479,18 +452,14 @@ video {
 }
 
 @media screen and (min-width: 1440px) {
-  .pc_mission_slider {
+  /* .pc_mission_slider {
     height: 43vh;
     margin-top: 3em;
-  }
+  } */
 
 }
 
 @media screen and (min-width: 1920px) {
-  .pc_mission_slider {
-    margin-top: 6em;
-  }
-
   .test_slide {
     width: 18.8%;
   }
@@ -505,9 +474,9 @@ video {
     width: 17%;
   }
 
-  .pc_mission_slider {
+  /* .pc_mission_slider {
     height: 46vh;
-  }
+  } */
 
   .test_slide.active {
     width: 34.5%;
