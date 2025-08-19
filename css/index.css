@@ -1,22 +1,8 @@
-
-
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
   background-color: #000;
   color: #fff;
   position: relative;
 }
-
-.hidden {
-  display: none !important;
-}
-
-
 
 /* 풀페이지 커스텀 */
 .fp-wrap {
