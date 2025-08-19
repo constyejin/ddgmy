@@ -38,11 +38,6 @@ function initializePage() {
         $.fn.fullpage.moveTo("fp-main");
 
     });
-    // 스크롤다운 아이콘 클릭 시
-    $(".scroll_box").click(function () {
-        $.fn.fullpage.moveTo("fp-mission");
-
-    });
 
     // 반응형 check -  Mission 반응형 제어
     function rwd() {
