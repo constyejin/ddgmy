@@ -46,10 +46,10 @@ $(function() {
         // GNB가 열릴 때만 모바일용 배너 이미지 적용
         if (careerPage.length === 0) {
             if (isGnbOpen) {
-                bannerImg.attr('src', "./assets/images/header/gnb_career_banner.png");
+                bannerImg.attr('src', "./assets/images/header/join_btn.png");
                 careerBanner.addClass("gnb_banner");
             } else {
-                bannerImg.attr('src', "./assets/images/header/career_banner.png");
+                bannerImg.attr('src', "./assets/images/header/join_btn.png");
                 careerBanner.removeClass("gnb_banner");
             }
         }
@@ -69,7 +69,7 @@ $(function() {
             
             // 배너 이미지 초기화 (Career 페이지가 아닐 때)
             if (careerPage.length === 0) {
-                bannerImg.attr('src', "./assets/images/header/career_banner.png");
+                bannerImg.attr('src', "./assets/images/header/join_btn.png");
                 careerBanner.removeClass("gnb_banner");
             }
         }
@@ -98,7 +98,7 @@ $(function() {
         $(".menu_icon").removeClass("hidden");
         $(".close_icon").addClass("hidden");
         if (careerPage.length === 0) {
-            bannerImg.attr('src', "./assets/images/header/career_banner.png");
+            bannerImg.attr('src', "./assets/images/header/join_btn.png");
             careerBanner.removeClass("gnb_banner");
         }
     });
