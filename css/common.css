@@ -1,9 +1,8 @@
-html {
-  font-size: 16px;
-  overflow-x: hidden;
+/* 공용 클래스 */
+.lg_hidden {
+  display : none;
 }
 
-/* 공용 클래스 */
 .upper {
   text-transform: uppercase;
 }
@@ -44,7 +43,7 @@ html {
   height: 100vh;
 }
 
-/* 로딩창 */
+/* ·········· LOADING ··········· */
 .loading_bg {
   position: fixed;
   top: 0;
@@ -60,12 +59,12 @@ html {
   pointer-events: none;
 }
 
-/* Header */
+/* ·········· HEADER ············ */
 .header_inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0;
+  padding: 1.6em 0;
   opacity: 0.9;
 }
 
@@ -85,13 +84,13 @@ html {
 
 .ddg_my_logo a {
   display: block;
-  width: 3em;
-  height: 3em;
+  width: 80px;
+  height: 80px;
   box-sizing: border-box;
 }
 
 .ddg_my_logo a img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -180,13 +179,6 @@ html {
   color: #fff;
 }
 
-
-
-
-
-
-
-
 .apply_btn {
   line-height: 1;
   padding: 0.8em 1.6em;
@@ -257,9 +249,9 @@ body>.skiptranslate,
   z-index: 1;
 }
 
-/* 햄버거 메뉴 */
+/* ·········· SIDEBAR ············ */
 #ddg_my_header .m_gnb_btn {
-  width: 36px;
+  width: 32px;
 }
 
 #ddg_my_header .m_gnb_btn img {
@@ -271,10 +263,10 @@ body>.skiptranslate,
 .top_btn,
 .career_banner {
   position: fixed;
-  right: 1.6em;
-  bottom: 4.8em;
-  width: 2.6em;
-  height: 2.6em;
+  right: .6em;
+  bottom: 3.2em;
+  width: 2.2em;
+  height: 2.2em;
   font-size: 1.4em;
   border: 0;
   border-radius: 50%;
@@ -286,10 +278,10 @@ body>.skiptranslate,
 }
 
 .career_banner {
-  right: 1.5em;
-  bottom: 1.6em;
-  width: 2.7em;
-  height: 2.7em;
+  right: .6em;
+  bottom: .6em;
+  width: 2.2em;
+  height: 2.2em;
   opacity: 1;
   z-index: 12;
   transition: all 0.3s ease-in;
@@ -322,8 +314,10 @@ body>.skiptranslate,
   border: 2px solid red;
 }
 
-/* pc 헤더 변경 : 1280px~ */
+
 @media screen and (max-width: 1280px) {
+  
+
   .max_inner {
     max-width: 1040px;
     margin: 0 auto;
@@ -331,11 +325,32 @@ body>.skiptranslate,
   }
 
   .header_inner {
-    padding: 0.2em 1em;
+    padding: 0em 1em;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .header_inner {
+    max-height: 80px;
+  }
+}
 
+@media screen and (max-width: 568px) {
+  .header_inner {
+    max-height: 70px;
+  }
+
+  .ddg_my_logo a {
+    width: 60px;
+    height: 60px;
+  }
+
+  #ddg_my_header .m_gnb_btn {
+    width: 24px;
+  }
+}
+
+/* pc 헤더 변경 : 1280px~ */
 @media screen and (min-width: 1280px) {
   .ddg_my_util {
     position: static;

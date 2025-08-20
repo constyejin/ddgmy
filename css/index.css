@@ -1,33 +1,6 @@
-body {
-  background-color: #000;
-  color: #fff;
-  position: relative;
-}
 
-/* 풀페이지 커스텀 */
-.fp-wrap {
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
-}
-
-#fp-nav {
-  display: none;
-}
 
 /* ·········· MAIN ·········· */
-.main_back::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-image: url('../assets/images/main_back.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-}
 
 .video_box {
   position: relative;
@@ -54,6 +27,7 @@ video {
 .main_title h1 {
   font-family: 'Segoe Black Italic';
   font-size: 3.3em;
+  font-size: clamp(32px, 4vw, 96px);
   letter-spacing: -0.64px;
   line-height: 1.25;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -370,30 +344,7 @@ video {
   font-family: 'Segoe Black', sans-serif !important;
 }
 
-/* ·········· 반응형 ·········· */
-@media screen and (max-width: 359px) {}
 
-@media screen and (min-width: 360px) {}
-
-@media screen and (min-width: 768px) {
-  .fp-wrap {
-    padding: 0 2em;
-  }
-
-  .mission_title {
-    margin: 8% 2em 3em;
-  }
-
-  .mo_slide {
-    width: calc(100vw - 8em);
-  }
-
-  /* ·········· section3 : we are ·········· */
-  .we_are_title {
-    height: 40vh;
-  }
-
-}
 
 /* pc 헤더 변경 : 1280px~ */
 @media screen and (min-width: 1280px) {
@@ -436,26 +387,7 @@ video {
   }
 
   /* ·········· section3 : we are ·········· */
-  .we_are_title {
-    height: 24vh;
-    background: url(../assets/images/we_are/we_are_title_pc.png) no-repeat center / contain;
-  }
 
-  .we_are_desc_pc {
-    display: block;
-  }
-
-  .we_are_desc_mo {
-    display: none;
-  }
-
-}
-
-@media screen and (min-width: 1440px) {
-  /* .pc_mission_slider {
-    height: 43vh;
-    margin-top: 3em;
-  } */
 
 }
 

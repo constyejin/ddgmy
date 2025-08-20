@@ -3,6 +3,18 @@
 @import './base/colors.css';
 @import './components.css';
 
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #000;
+}
+
+/* 풀페이지 커스텀 */
+.fp-wrap {
+  position: relative;
+}
 
 section.back_img,
 div.back_img {
@@ -21,7 +33,21 @@ div.back_img {
   border-radius: 50%;
 }
 
+/* ·········· MAIN ············ */
+
 /* ········ DDG_VALUE ········· */
+.we_are_title {
+  height: 24vh;
+  background: url(../assets/images/we_are/we_are_title_pc.png) no-repeat center / contain;
+}
+
+.we_are_desc {
+  margin-top: 30px;
+}
+
+
+
+/* ······· DDG_CULTURE ········ */
 .ddg_value {
   display: flex;
   justify-content: center;
@@ -201,12 +227,30 @@ div.back_img {
 }
 
 @media screen and (max-width: 1280px) {
+  .lg_only {
+    display: none;
+  }
+
+  .lg_hidden {
+    display: block;
+  }
+  
   .main_back::after {
     content: '';
     background-image: none;
   }
 
-  /* ········ DDG_VALUE ········· */
+  .main_contents {
+    padding-left: 20px;
+  }
+
+  .we_are_title {
+    height: 32vh;
+    background: url(../assets/images/we_are/we_are_title_mo.png) no-repeat center / contain;
+  }
+
+
+  /* ········ DDG_CULTURE ········· */
   .ddg_value_wrap {
     padding: 0 40px;
   }
