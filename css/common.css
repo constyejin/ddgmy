@@ -92,6 +92,7 @@
 .ddg_my_logo a img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .logo_img_pc {
@@ -120,25 +121,25 @@
   right: 0;
 }
 
-.ddg_my_util #ddg_my_gnb {
-  padding-top: 13em;
-}
-
 .ddg_my_util #ddg_my_gnb::before {
   content: "";
-  position: absolute;
-  display: block;
-  top: 5em;
+  position: relative;
+  top: 2em;
   left: 50%;
-  width: 8em;
-  height: 8em;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
   background: url(../assets/images/logo_mo.png) no-repeat center / contain;
+    border: 2px solid red;
 }
 
 .ddg_my_util #ddg_my_gnb ol {
   display: flex;
   flex-direction: column;
+  margin-top: 2em;
+  font-size: 30px;
+  border: 2px solid red;
 }
 
 .ddg_my_util #ddg_my_gnb .depth1 {
@@ -147,9 +148,7 @@
 
 .ddg_my_util #ddg_my_gnb .depth1>a {
   display: block;
-  margin: 3% auto;
-  line-height: 2em;
-  font-size: 2.9em;
+  margin: 0 auto;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
@@ -316,7 +315,7 @@ body>.skiptranslate,
 
 
 @media screen and (max-width: 1280px) {
-  
+
 
   .max_inner {
     max-width: 1040px;
