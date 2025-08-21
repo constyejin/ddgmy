@@ -7,8 +7,24 @@ function initializePage() {
     const body = $("body");
     const topBtn = $(".top_btn")
     const h1Elements = $('.main_title h1');
-    const gnbWrap = $(".ddg_my_util");
-    const gnbLinks = $("#ddg_my_gnb .depth1 a");
+
+    // Fullpage.js의 afterLoad 콜백에서 호출될 함수
+function updateGnbActiveState(destinationAnchor) {
+  const gnbLinks = $('.gnb_item > a');
+  gnbLinks.parent().removeClass("active");
+
+  gnbLinks.each(function () {
+    const linkHref = $(this).attr('href');
+    const urlParts = linkHref ? linkHref.split('#') : [];
+    const cleanHref = urlParts.length > 1 ? urlParts[1] : '';
+
+    if (cleanHref === destinationAnchor) {
+      $(this).parent().addClass("active");
+      return false;
+    }
+  });
+}
+
 
     // section1 (main) : h1 - 다 숨긴 다음, 랜덤 인덱스 생성 후 하나만 표시
     h1Elements.hide();

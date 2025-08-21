@@ -1,38 +1,4 @@
 
-
-/* ·········· MAIN ·········· */
-
-.video_box {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  border-radius: 0;
-  overflow: hidden;
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 60%;
-}
-
-.main_contents {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-} 
-
-.main_title h1 {
-  font-family: 'Segoe Black Italic';
-  font-size: 3.3em;
-  font-size: clamp(32px, 8vw, 96px);
-  letter-spacing: -0.64px;
-  line-height: 1.25;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-
 /* ·········· MISSION ·········· */
 .mission_title {
   margin: 14% 2em 3em;
@@ -125,7 +91,6 @@ video {
 .after_txt p {
   margin: 20px 0 16px;
   font-weight: 600;
-  /* text-align: left; */
 }
 
 .mission_list {
@@ -346,7 +311,6 @@ video {
 
 
 
-/* pc 헤더 변경 : 1280px~ */
 @media screen and (min-width: 1280px) {
   .test_slide {
     width: 20%;
@@ -375,20 +339,6 @@ video {
     padding: 0;
   }
 
-  .main_title {
-    height: 46vh;
-    padding-bottom: 3%;
-  }
-
-  .main_title h1 {
-    font-size: 6em;
-    letter-spacing: -0.9px;
-    line-height: 1.2;
-  }
-
-  /* ·········· section3 : we are ·········· */
-
-
 }
 
 @media screen and (min-width: 1920px) {
@@ -405,10 +355,6 @@ video {
   .test_slide {
     width: 17%;
   }
-
-  /* .pc_mission_slider {
-    height: 46vh;
-  } */
 
   .test_slide.active {
     width: 34.5%;

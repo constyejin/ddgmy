@@ -8,12 +8,62 @@ html {
 }
 
 body {
+  top: 0 !important;
   background-color: #000;
 }
 
-/* 풀페이지 커스텀 */
+/* ········ 풀페이지 커스텀 ······· */
 .fp-wrap {
   position: relative;
+}
+
+/* ······· COMMON CLASS ······· */
+.visually_hidden {
+  display: none;
+}
+
+.lg_hidden {
+  display : none;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.blind,
+.sound-only {
+  position: absolute;
+  left: -9999em;
+}
+
+#skip a {
+  position: fixed;
+  top: -10rem;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  line-height: 4em;
+  text-align: center;
+  background-color: #fff;
+}
+
+#skip a:focus {
+  top: 0;
+}
+
+.sec_home,
+.main_text {
+  height: 100vh;
 }
 
 section.back_img,
@@ -33,7 +83,69 @@ div.back_img {
   border-radius: 50%;
 }
 
+/* ·········· LOADING ··········· */
+.loading_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+
 /* ·········· MAIN ············ */
+.main_back::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('../assets/images/main_back.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.video_box {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60%;
+}
+
+.main_contents {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+} 
+
+.main_title h1 {
+  font-family: 'Segoe Black Italic';
+  font-size: 3.3em;
+  font-size: clamp(32px, 8vw, 96px);
+  letter-spacing: -0.64px;
+  line-height: 1.25;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
 
 /* ········ DDG_VALUE ········· */
 .we_are_title {
@@ -78,7 +190,7 @@ div.back_img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
   width: 100%;
 }
 
@@ -86,6 +198,7 @@ div.back_img {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-width: 400px;
 }
 
 .ddg_value .section_title {
@@ -98,7 +211,7 @@ div.back_img {
 }
 
 .ddg_value_img {
-  height: 540px;
+  height: auto;
 }
 
 .ddg_value_img img {
@@ -234,7 +347,7 @@ div.back_img {
   .lg_hidden {
     display: block;
   }
-  
+
   .main_back::after {
     content: '';
     background-image: none;
