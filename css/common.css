@@ -337,13 +337,6 @@ body>.skiptranslate,
     display: none;
   }
 
-  .lang_buttons {
-    position: absolute;
-    top: 92%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   /* ·········· SIDEBAR ············ */
   .sidebar {
     position: fixed;
@@ -412,8 +405,10 @@ body>.skiptranslate,
   }
 
   .sidebar .lang_buttons {
+    /* position: absolute; */
+    /* bottom: 12%; */
+    margin-top: 1em;
     border: none;
-    padding-bottom: 12%;
   }
 
   .sidebar .lang_buttons button:first-child::after {
