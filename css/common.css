@@ -167,7 +167,6 @@ body>.skiptranslate,
   flex: 1;
   max-height: 100px;
   opacity: 0.9;
-  border: 2px solid red;
 }
 
 .logo {
@@ -386,7 +385,6 @@ body>.skiptranslate,
     position: relative;
     z-index: 1000;
     width: 30px;
-    border: 2px solid red;
   }
 
   .sidebar_btn img {
