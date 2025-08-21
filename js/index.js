@@ -8,7 +8,7 @@ function initializePage() {
     const topBtn = $(".top_btn")
     const h1Elements = $('.main_title h1');
 
-    // Fullpage.js의 afterLoad 콜백에서 호출될 함수
+// Fullpage.js의 afterLoad 콜백에서 호출될 함수
 function updateGnbActiveState(destinationAnchor) {
   const gnbLinks = $('.gnb_item > a');
   gnbLinks.parent().removeClass("active");
@@ -147,11 +147,11 @@ function updateGnbActiveState(destinationAnchor) {
     // 페이지 로딩 시에도 프로그레스바 초기화
     mission_progress(); 
 }
+initializePage();
 
 // 헤더가 로딩된 후 실행
-$("#header_placeholder").load("header.html", function() {
-   initializePage();
-});
+// $("#header_placeholder").load("header.html", function() {
+// });
 
 function mission_reset(){
     $('.test_slide1').addClass('active');

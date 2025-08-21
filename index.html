@@ -29,8 +29,60 @@
 </head>
 
 <body>
-  <!--공통 헤더 영역-->
-  <div id="header_placeholder"></div>
+  <div id="header_placeholder">
+    <div id="skip">
+      <a href="#ddg_my_main">본문 바로가기</a>
+      <a href="#ddg_my_gnb">주메뉴 바로가기</a>
+    </div>
+
+    <div class="loading_bg">
+      로딩중..
+    </div>
+
+    <header id="ddg_my_header" class="ddg_my_header">
+      <h1 class="visually_hidden">메인 메뉴</h1>
+      <div class="header_inner max_inner">
+        <h1 class="logo">
+          <a href="./index.html"></a>
+        </h1>
+
+        <nav id="ddg_my_gnb" class="ddg_my_gnb" translate="no">
+          <ul class="lg_only gnb_list">
+            <li class="gnb_item">
+              <a class="upper" href="./index.html#fp-mission">Mission</a>
+            </li>
+            <li class="gnb_item">
+              <a class="upper" href="./index.html#fp-value">value</a>
+            </li>
+            <li class="gnb_item">
+              <a class="upper" href="./index.html#fp-culture">Culture</a>
+            </li>
+            <li class="gnb_item">
+              <a class="upper" href="./index.html#fp-contact">contact</a>
+            </li>
+          </ul>
+
+          <button class="lg_only btn btn-44 btn-primary apply_btn">
+            <a href="./career.html">
+              <span>APPLY NOW</span>
+            </a>
+          </button>
+
+          <div class="lg_only lang_buttons">
+            <button data-lang="ko" translate="no" class="lang-btn active">KO</button>
+            <button data-lang="en" translate="no" class="lang-btn">EN</button>
+          </div>
+        </nav>
+
+        <button id="ddd" class="lg_hidden sidebar_btn">
+          <img src="./assets/images/header/menu_icon.png" alt="햄버거 메뉴 버튼">
+        </button>
+        <!-- 숨겨진 번역기 -->
+        <div id="google_translate_element" style="display:none;"></div>
+      </div>
+    </header>
+  </div>
+  
   <!--메인 페이지 시작 -->
   <div id="ddg-main-container" class="wrapper">
     <section id="main" class="section main_back" data-anchor="fp-main">
@@ -348,13 +400,59 @@
     </section>
   </div>
 
+  <aside class="lg_hidden sidebar">
+    <div>
+      <h1 class="logo">
+        <a href="./index.html"></a>
+      </h1>
+
+      <button class="close_btn">
+        <img src="./assets/images/header/close_icon.png" alt="닫기 버튼">
+      </button>
+
+      <ul class="gnb_list_sm" translate="no">
+        <li class="gnb_item">
+          <a class="upper" href="./index.html#fp-mission">Mission</a>
+        </li>
+        <li class="gnb_item">
+          <a class="upper" href="./index.html#fp-value">value</a>
+        </li>
+        <li class="gnb_item">
+          <a class="upper" href="./index.html#fp-culture">Culture</a>
+        </li>
+        <li class="gnb_item">
+          <a class="upper" href="./index.html#fp-contact">contact</a>
+        </li>
+      </ul>
+
+      <button class="btn btn-primary join_btn" translate="no">
+        <span>Join Us!</span>
+        <span class="arrow">
+          <img src="../assets/icons/join_arrow.png" alt="join_arrow">
+        </span>
+      </button>
+
+      <div class="lg_hidden lang_buttons">
+        <button data-lang="ko" translate="no" class="lang-btn active">KO</button>
+        <button data-lang="en" translate="no" class="lang-btn">EN</button>
+      </div>
+    </div>
+  </aside>
+
   <button class="top_btn">
     <i class="fa-solid fa-arrow-up"></i>
     <span class="sound-only">위로가기</span>
   </button>
 
+  <a href="./career.html" class="career_banner">
+    <img src="./assets/images/header/join_us.png" alt="채용 배너">
+  </a>
+
   <!-- 내부 script -->
-  <script type="text/javascript" src="./js/include.js"></script>
+
+  <script src="./js/header_v2.js"></script>
+  <script src="./js/translate.js"></script>
+  <!-- <script type="text/javascript" src="./js/include.js"></script> -->
   <script type="text/javascript" src="./js/index.js"></script>
   <script type="text/javascript" src="./js/ddg_value.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
